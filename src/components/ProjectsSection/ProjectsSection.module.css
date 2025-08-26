@@ -1,0 +1,62 @@
+.swiperContainer {
+  margin: 0 auto;
+  max-width: 342px;
+
+  @media (min-width: 768px) {
+    max-width: 960px;
+  }
+}
+
+.imagesContainer {
+  display: flex;
+  flex-direction: column-reverse;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+.imageContainer {
+  border-radius: 8px;
+  border: 3px solid white;
+  overflow: hidden;
+}
+
+.leftImageContainer {
+  width: 320px;
+  height: 320px;
+  margin-top: -24px;
+
+  @media (min-width: 768px) {
+    margin-top: 12px;
+    width: 520px;
+    height: 520px;
+    transform: translateX(20px);
+  }
+}
+
+.rightImageContainer {
+  margin-left: 24px;
+  width: 300px;
+  height: 300px;
+
+  @media (min-width: 768px) {
+    margin: 0 20px 0 -20px;
+    width: 480px;
+    height: 480px;
+  }
+}
+
+.desc {
+  border-radius: 4px;
+  border: 1px solid var(--color-border);
+  width: 320px;
+  padding: 24px;
+  background-color: #fff;
+
+  @media (min-width: 768px) {
+    width: 480px;
+    margin: -40px auto 0;
+    transform: translateY(-20px);
+  }
+}

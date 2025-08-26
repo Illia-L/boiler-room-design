@@ -1,0 +1,19 @@
+.mySwiper {
+  --swiper-navigation-color: #111;
+  --swiper-navigation-size: 28px;
+}
+.mySwiper .swiper-button-prev,
+.mySwiper .swiper-button-next {
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  width: 48px;
+  height: 48px;
+  color: var(--color-primary);
+  background: white;
+}
+.mySwiper .swiper-button-prev {
+  left: 8px;
+}
+.mySwiper .swiper-button-next {
+  right: 8px;
+}

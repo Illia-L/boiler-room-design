@@ -1,0 +1,45 @@
+.h1 {
+  text-align: center;
+}
+
+.p {
+  line-height: 1.5;
+
+  @media (min-width: 768px) {
+    margin: 0 auto;
+    max-width: 540px;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 600px;
+  }
+}
+
+.section {
+  margin-top: 32px;
+
+  @media (min-width: 768px) {
+    margin-top: 40px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-top: 48px;
+  }
+}
+
+.sectionContent {
+  margin-top: 16px;
+
+  @media (min-width: 768px) {
+    margin-top: 20px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-top: 24px;
+  }
+}
+
+.compareBox {
+  width: 600px;
+  height: 600px;
+}

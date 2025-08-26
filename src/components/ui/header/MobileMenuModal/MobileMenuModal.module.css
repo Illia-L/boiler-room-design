@@ -1,0 +1,45 @@
+:root {
+  --transition: 200ms ease;
+}
+
+.overlayBase {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: default;
+  z-index: 14;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition);
+}
+
+.overlayAfterOpen {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlayBeforeClose {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.contentBase {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100dvh;
+  width: min(86vw, 360px);
+  background: var(--color-surface, #fff);
+  box-shadow: -2px 0 16px rgba(0, 0, 0, 0.2);
+  transform: translateX(100%);
+  z-index: 15;
+  transition: transform var(--transition);
+}
+
+.contentAfterOpen {
+  transform: translateX(0);
+}
+
+.contentBeforeClose {
+  transform: translateX(100%);
+}
