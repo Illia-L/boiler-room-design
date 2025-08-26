@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import css from './Header.module.css';
 import Nav from '../Nav/Nav';
-import ContactsWidget from '../ContactsWidget/ContactsWidget';
 import MobileMenuModal from '../MobileMenuModal/MobileMenuModal';
 import OpenMenuButton from '../OpenMenuButton/OpenMenuButton';
 
@@ -30,9 +29,9 @@ const Header: React.FC = () => {
               <Nav />
             </nav>
 
-            <div className={css.contactsArea}>
-              <ContactsWidget />
-            </div>
+            <address className={css.contactsArea}>
+              <a href="tel:+380668057980">(066) 805-79-80</a>
+            </address>
 
             <div className={css.menuArea}>
               <OpenMenuButton onOpen={() => setIsOpen(true)} />

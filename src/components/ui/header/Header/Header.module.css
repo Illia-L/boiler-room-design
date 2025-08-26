@@ -54,7 +54,9 @@
     display: block;
   }
   .contactsArea {
-    display: block;
+    display: flex;
+    align-items: center;
+    height: 100%;
     /* margin-left: auto; */
   }
   .menuArea {
