@@ -13,12 +13,12 @@ const projects: Project[] = [
     id: 'villa-kyiv',
     title: 'Private villa — Kyiv',
     before: {
-      src: '2000', // 960×720 preferred
+      src: 'kyiv-osokorky-design', // 960×720 preferred
       alt: '3D render of boiler-room layout',
       label: '3D render',
     },
     after: {
-      src: '4000',
+      src: 'kyiv-osokorky',
       alt: 'Installed boiler-room photo',
       label: 'Installed',
     },

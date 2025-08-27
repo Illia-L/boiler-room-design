@@ -11,7 +11,9 @@ function Layout({ children }: LayoutProps) {
     <div className={css.app}>
       <Header />
       <main className={css.main}>
-        <div className='container'>{children}</div>
+        {/* <div className='container'> */}
+          {children}
+        {/* </div> */}
       </main>
       <footer>Footer</footer>
     </div>
