@@ -1,0 +1,24 @@
+@import 'modern-normalize/modern-normalize.css';
+@import './reset.css';
+@import './colors.css';
+
+body {
+  font-family: var(--ibm-plex-sans), system-ui, -apple-system, 'Segoe UI',
+    Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.container {
+  padding-inline: 16px;
+
+  @media (min-width: 768px) {
+    padding-inline: 24px;
+  }
+
+  @media (min-width: 1028px) {
+    padding-inline: 36px;
+  }
+
+  @media (min-width: 1440px) {
+    padding-inline: 40px;
+  }
+}
