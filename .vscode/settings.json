@@ -1,9 +1,0 @@
-{
-  // Always insert braces for JSX attributes like className -> className={}
-  "javascript.preferences.jsxAttributeCompletionStyle": "braces",
-  "typescript.preferences.jsxAttributeCompletionStyle": "braces"
-
-  // Optional alternative if you prefer just the attribute name without any value snippet:
-  // "javascript.preferences.jsxAttributeCompletionStyle": "none",
-  // "typescript.preferences.jsxAttributeCompletionStyle": "none"
-}
