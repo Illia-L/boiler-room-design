@@ -1,11 +1,12 @@
 import css from './page.module.css';
+import HeroSection from '@/features/home/HeroSection/HeroSection';
 
 export default function Home() {
   return (
     <div>
       <h1>Головна</h1>
 
-      <section>Hero</section>
+      <HeroSection />
 
       <section>Що входить до проєкту</section>
 
