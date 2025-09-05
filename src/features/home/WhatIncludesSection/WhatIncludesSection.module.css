@@ -1,0 +1,32 @@
+.item {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+  line-height: 1.6;
+
+  @media (min-width: 768px) {
+    font-size: 1.125rem;
+  }
+
+  @media (min-width: 1440px) {
+    font-size: 1.25rem;
+  }
+}
+
+.item:first-child {
+  margin-top: 0;
+}
+
+.iconBox {
+  display: flex;
+  align-items: center;
+  height: 1.6em;
+}
+
+.icon {
+  height: 1.2em;
+  width: 1.2em;
+  fill: none;
+  stroke: var(--color-primary);
+  stroke-width: 1;
+}
