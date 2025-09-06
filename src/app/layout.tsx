@@ -4,6 +4,7 @@ import '@/css/globals.css';
 import css from './layout.module.css';
 import clsx from 'clsx';
 import Header from '@/features/ui/header/Header/Header';
+import Footer from '@/features/ui/Footer/Footer';
 
 const plexSans = IBM_Plex_Sans({
   subsets: ['latin', 'cyrillic'],
@@ -29,7 +30,7 @@ export default function RootLayout({
 
         <main className={css.main}>{children}</main>
 
-        <footer>Footer</footer>
+        <Footer />
       </body>
     </html>
   );
