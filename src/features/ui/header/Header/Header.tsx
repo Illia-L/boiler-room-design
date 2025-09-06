@@ -42,6 +42,7 @@ const Header: FC = () => {
             width={24}
             height={24}
             priority
+            aria-hidden='true'
           />
         </button>
       </div>

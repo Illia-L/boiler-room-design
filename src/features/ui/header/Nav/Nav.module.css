@@ -14,6 +14,8 @@
     padding: 8px 12px;
     display: inline-block;
     white-space: nowrap;
+    min-width: 44px;
+    min-height: 44px;
 }
 
 .link::after {
@@ -24,7 +26,7 @@
     bottom: 0;
     width: 100%;
     height: 2px;
-    background-color: var(--color-primary-active-bg);
+    background-color: currentColor;
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.2s ease;
@@ -33,8 +35,15 @@
 .active::after {
     transform: scaleX(1);
 }
+.link:hover {
+    color: var(--color-accent);
+}
+.link:focus-visible {
+    outline: 2px solid var(--color-info);
+    outline-offset: 2px;
+}
 
-@media (max-width: 1027px) {
+@media (max-width: 1023.98px) {
     .list {
         flex-direction: column;
         gap: 12px;
@@ -42,7 +51,6 @@
     }
     .link {
         display: block;
-        color: var(--color-primary);
     }
     .link::after { 
         display: none;
