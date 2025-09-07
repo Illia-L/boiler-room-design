@@ -1,7 +1,12 @@
+.nav {
+    display: flex;
+}
+
 .list {
     display: flex;
     gap: 24px;
     list-style: none;
+    align-items: center;
     margin: 0;
     padding: 0;
 }
@@ -16,6 +21,7 @@
     white-space: nowrap;
     min-width: 44px;
     min-height: 44px;
+    transition: color 0.2s ease;
 }
 
 .link::after {
