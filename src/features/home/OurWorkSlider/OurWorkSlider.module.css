@@ -1,0 +1,39 @@
+.section {
+  padding: 72px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 45px;
+}
+.swiper {
+  width: 100%;
+}
+:global(.swiper-button-next::after),
+:global(.swiper-button-prev::after) {
+  color: #4e4e57;
+  width: 37px;
+  height: 70px;
+  font-weight: bold;
+  font-size: 64px;
+
+  transition: all 0.5s ease;
+}
+:global(.swiper-button-next:hover)::after,
+:global(.swiper-button-prev:hover)::after {
+  color: #3f3fe0;
+}
+.btnMore {
+  padding: 10px 40px;
+  background: #404040;
+
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.4;
+  text-align: center;
+  color: #fff;
+
+  transition: all 0.5s ease;
+}
+.btnMore:hover {
+  background: #575757;
+}

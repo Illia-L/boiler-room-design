@@ -5,7 +5,8 @@
   gap: 45px;
 
   border: 1px solid #ededed;
-  /* width: 1265px; */
+  width: 1265px;
+  margin: 0 auto;
   /* height: 636px; */
   padding: 71px 38px 55px 38px;
 }

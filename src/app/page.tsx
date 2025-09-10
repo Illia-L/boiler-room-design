@@ -2,6 +2,7 @@ import ExperienceSection from '@/features/home/ExperienceSection/ExperienceSecti
 import css from './page.module.css';
 import HeroSection from '@/features/home/HeroSection/HeroSection';
 import WhatIncludesSection from '@/features/home/WhatIncludesSection/WhatIncludesSection';
+import OurWorkSlider from '@/features/home/OurWorkSlider/OurWorkSlider';
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
 
       <WhatIncludesSection />
 
-      <section>Наші роботи (слайдер)</section>
+      <OurWorkSlider />
 
       <ExperienceSection />
     </div>
