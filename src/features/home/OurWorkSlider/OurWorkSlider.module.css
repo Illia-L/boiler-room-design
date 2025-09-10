@@ -4,36 +4,41 @@
   flex-direction: column;
   align-items: center;
   gap: 45px;
+  background-color: var(--color-bg);
+  color: var(--color-text);
 }
+
 .swiper {
   width: 100%;
 }
+
 :global(.swiper-button-next::after),
 :global(.swiper-button-prev::after) {
-  color: #4e4e57;
+  color: var(--color-text-muted);
   width: 37px;
   height: 70px;
   font-weight: bold;
   font-size: 64px;
-
   transition: all 0.5s ease;
 }
+
 :global(.swiper-button-next:hover)::after,
 :global(.swiper-button-prev:hover)::after {
-  color: #3f3fe0;
+  color: var(--color-primary-hover);
 }
+
 .btnMore {
   padding: 10px 40px;
-  background: #404040;
-
+  background: var(--color-primary);
   font-weight: 700;
   font-size: 28px;
   line-height: 1.4;
   text-align: center;
-  color: #fff;
-
+  color: var(--color-on-primary);
   transition: all 0.5s ease;
 }
+
 .btnMore:hover {
-  background: #575757;
+  background: var(--color-primary-hover);
+  color: var(--color-on-primary-hover);
 }
