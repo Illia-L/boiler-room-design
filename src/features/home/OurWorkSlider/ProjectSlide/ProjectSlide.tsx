@@ -2,6 +2,7 @@ import s from "./ProjectSlide.module.css";
 import { FC } from "react";
 import Image from "next/image";
 import { Project } from "@/data/projects";
+import Link from "next/link";
 
 interface ProjectSlideProps {
   project: Project;
@@ -25,28 +26,38 @@ const ProjectSlide: FC<ProjectSlideProps> = ({ project }) => {
           <Image
             src={`/img/${project.installed.src}.jpg`}
             alt={project.installed.alt}
-            width={382}
-            height={510}
+            fill
             className={s.image}
           />
           <p className={s.imgLabel}>Проєкт</p>
         </div>
       </div>
-			<div className={s.decs}>
-				<h3 className={s.city}>{project.city}</h3>
-				<div className={s.info}>
-					<p>Потужність: <strong>{project.capacity} кВт</strong></p>
-					<p>Паливо: <strong>{project.fuel}</strong></p>
-				</div>
-				<div className={s.challenges}>
-					<h4 className={s.chTitle}>Виклики проєкту:</h4>
-					<ul className={s.chList}>
-						{project.challenges.map((ch, i) => (
-							<li key={i} className={s.chItem}>{ch}</li>
-						))}
-					</ul>
-				</div>
-			</div>
+      <div className={s.decs}>
+        <h3 className={s.city}>{project.city}</h3>
+        <div className={s.info}>
+          <p>
+            Потужність: <strong>{project.capacity} кВт</strong>
+          </p>
+          <p>
+            Паливо: <strong>{project.fuel}</strong>
+          </p>
+        </div>
+        <div className={s.challenges}>
+          <h4 className={s.chTitle}>Виклики проєкту:</h4>
+          <ul className={s.chList}>
+            {project.challenges.map((ch, i) => (
+              <li key={i} className={s.chItem}>
+                {ch}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className={s.moreDiv}>
+          <Link href="/our-work" className={s.btnMore}>
+            Дивитися більше проектів
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };

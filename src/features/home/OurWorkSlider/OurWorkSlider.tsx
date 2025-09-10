@@ -9,7 +9,6 @@ import "swiper/css/pagination";
 
 import s from "./OurWorkSlider.module.css";
 import clsx from "clsx";
-import Link from "next/link";
 
 import projects from "@/data/projects";
 import ProjectSlide from "./ProjectSlide/ProjectSlide";
@@ -32,9 +31,6 @@ const OurWorkSlider: FC = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div>
-        <Link href="/our-work" className={s.btnMore}>Дивитися більше проектів</Link>
-      </div>
     </section>
   );
 };
