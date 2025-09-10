@@ -11,8 +11,8 @@ function ProductCard({ product }: { product: Product }) {
       aria-labelledby={`product-${product.id}-title`}
       style={{
         border: "1px solid #ddd",
-        borderRadius: 8,
-        padding: 16,
+        borderRadius: 4,
+        padding: 20,
         display: "flex",
         flexDirection: "column",
         gap: 12,
@@ -26,31 +26,33 @@ function ProductCard({ product }: { product: Product }) {
           alt={product.title}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          style={{ objectFit: "cover", borderRadius: 8 }}
+          style={{ objectFit: "cover", borderRadius: 4 }}
         />
       </div>
 
       {/* Назва */}
       <h3
         id={`product-${product.id}-title`}
-        style={{ fontSize: 16, fontWeight: 600, margin: "8px 0 0" }}
+        style={{  fontSize: 16, fontWeight: 600, margin: "8px 0 0", textAlign: "center" }}
       >
         {product.title}
       </h3>
+<div style={{display: "flex", justifyContent: "space-between",}}>
 
-      {/* Код товару */}
-      <p style={{ fontSize: 14, color: "#666", margin: 0 }}>
-        Код товару: {product.code}
-      </p>
-
-      {/* Ціна */}
+   {/* Ціна */}
       <p style={{ fontSize: 16, fontWeight: 500, margin: "4px 0" }}>
         {product.price.toLocaleString("uk-UA")} ₴
       </p>
+      {/* Код товару */}
+      <p style={{ fontSize: 14, color: "#666", margin: 0 }}>
+        Код товару <p> {product.code}</p>
+      </p>
 
+     
+</div>
       {/* Кнопки */}
-      <div style={{ marginTop: "auto" }}>
-        <Button type="button">Додати у кошик</Button>
+      <div>
+        <Button style={{ width: "100%", background: "#4E4E57", borderRadius: "4px" }} type="button">Додати у кошик</Button>
       </div>
     </article>
   );
