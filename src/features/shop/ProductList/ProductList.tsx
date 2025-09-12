@@ -4,6 +4,7 @@ import Image from "next/image";
 import { products } from "../data/products";
 import type { Product } from "../types";
 import Button from "../../ui/Button/Button";
+import { Heart } from "lucide-react";
 
 function ProductCard({ product }: { product: Product }) {
   return (
@@ -33,26 +34,36 @@ function ProductCard({ product }: { product: Product }) {
       {/* Назва */}
       <h3
         id={`product-${product.id}-title`}
-        style={{  fontSize: 16, fontWeight: 600, margin: "8px 0 0", textAlign: "center" }}
+        style={{
+          fontSize: 16,
+          fontWeight: 600,
+          margin: "8px 0 0",
+          textAlign: "center",
+        }}
       >
         {product.title}
       </h3>
-<div style={{display: "flex", justifyContent: "space-between",}}>
-
-   {/* Ціна */}
-      <p style={{ fontSize: 16, fontWeight: 500, margin: "4px 0" }}>
-        {product.price.toLocaleString("uk-UA")} ₴
-      </p>
-      {/* Код товару */}
-      <p style={{ fontSize: 14, color: "#666", margin: 0 }}>
-        Код товару <p> {product.code}</p>
-      </p>
-
-     
-</div>
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
+        {/* Ціна */}
+        <p style={{ fontSize: 16, fontWeight: 500, margin: "4px 0" }}>
+          {product.price.toLocaleString("uk-UA")} ₴
+        </p>
+        {/* Код товару */}
+        <p style={{ fontSize: 14, color: "#666", margin: 0 }}>
+          Код товару <p> {product.code}</p>
+        </p>
+      </div>
       {/* Кнопки */}
       <div>
-        <Button style={{ width: "100%", background: "#4E4E57", borderRadius: "4px" }} type="button">Додати у кошик</Button>
+        <button type="button">
+          <Heart />
+        </button>
+        <Button
+          style={{ width: "100%", background: "#4E4E57", borderRadius: "4px" }}
+          type="button"
+        >
+          Додати у кошик
+        </Button>
       </div>
     </article>
   );
