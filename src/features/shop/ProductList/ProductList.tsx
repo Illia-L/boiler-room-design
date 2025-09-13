@@ -44,7 +44,10 @@ function ProductCard({ product }: { product: Product }) {
       hovered ? setHovered(false) : setHovered(true);
      
     }}
- 
+    //  onMouseEnter={() => hovered == true ? setHovered(true):setHovered(false)}
+    //  onMouseLeave={() => hovered == false ? setHovered(true):setHovered(false)}
+    //  onMouseEnter={() => setHovered(true)}
+    //  onMouseLeave={() => setHovered(false)}
     >
 
       {hovered ? (
