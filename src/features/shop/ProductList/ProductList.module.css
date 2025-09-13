@@ -1,9 +1,54 @@
+.productCard {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #fff;
+}
+.imageBlock {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+}
+.imageCard {
+  object-fit: cover;
+  border-radius: 4px;
+}
 .like {
-  position: absolute;       
+  position: absolute;
   top: 8px;
-  right: 8px;              
-  z-index: 2;              
+  right: 8px;
+  z-index: 2;
   background: none;
   border: none;
   cursor: pointer;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 8px 0px 0px;
+  text-align: center;
+}
+
+.articlePrice {
+  display: flex;
+  justify-content: space-between;
+}
+.priceCard {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 4px 0px;
+}
+.articleCard {
+  font-size: 14px;
+  color: #666;
+  margin: 0px;
+}
+.addToCard {
+  width: 100%;
+  background: #4e4e57;
+  border-radius: 4px;
 }
