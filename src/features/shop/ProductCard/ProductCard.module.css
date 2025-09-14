@@ -1,4 +1,7 @@
+
 .productCard {
+  width: 340px;
+  height: 498px;
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 20px;
