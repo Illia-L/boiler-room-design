@@ -1,9 +1,0 @@
-.like {
-  position: absolute;       
-  top: 8px;
-  right: 8px;              
-  z-index: 2;              
-  background: none;
-  border: none;
-  cursor: pointer;
-}
