@@ -8,19 +8,21 @@ import css from "./ProductCard.module.css";
 export default function ProductCard({ product }: { product: Product }) {
   const [hovered, setHovered] = useState(false);
   return (
-    <article
+    <article 
       aria-labelledby={`product-${product.id}-title`}
       className={css.productCard}
     >
       {/* Картинка */}
       <div className={css.imageBlock}>
+        <div>
         <Image
           src={product.image}
           alt={product.title}
           fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        //   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className={css.imageCard}
         />
+        </div>
         <button
           className={css.like}
           type="button"
