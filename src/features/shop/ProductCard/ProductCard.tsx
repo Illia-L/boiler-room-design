@@ -2,11 +2,10 @@ import Image from 'next/image';
 import type { Product } from '../types';
 import Button from '../../ui/Button/Button';
 import { Heart } from 'lucide-react';
-import { useState } from 'react';
+
 import css from './ProductCard.module.css';
 
 export default function ProductCard({ product }: { product: Product }) {
-  const [hovered, setHovered] = useState(false);
   return (
     <article
       aria-labelledby={`product-${product.id}-title`}
@@ -19,40 +18,15 @@ export default function ProductCard({ product }: { product: Product }) {
             src={product.image}
             alt={product.title}
             fill
-            //   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className={css.imageCard}
           />
         </div>
-        <button
+        <Button
+          variant='link'
           className={css.like}
-          type='button'
-          onClick={() => {
-            // hovered ? setHovered(false) : setHovered(true);
-          }}
-          //  onMouseEnter={() => hovered == true ? setHovered(true):setHovered(false)}
-          //  onMouseLeave={() => hovered == false ? setHovered(true):setHovered(false)}
-          //  onMouseEnter={() => setHovered(true)}
-          //  onMouseLeave={() => setHovered(false)}
         >
-          {hovered ? (
-            <svg
-              width='28'
-              height='24'
-              viewBox='0 0 28 24'
-              fill='none'
-              xmlns='http://www.w3.org/2000/svg'
-            >
-              <path
-                fill-rule='evenodd'
-                clip-rule='evenodd'
-                d='M2.21616 2.2491C2.91837 1.54928 3.75207 0.994138 4.66965 0.615385C5.58723 0.236632 6.57071 0.0416878 7.56391 0.0416878C8.55712 0.0416878 9.54059 0.236632 10.4582 0.615385C11.3757 0.994138 12.2095 1.54928 12.9117 2.2491C13.1869 2.52435 13.5433 2.86691 13.9809 3.27677C14.4165 2.86691 14.7729 2.52385 15.0502 2.2476C16.4574 0.823886 18.3747 0.0154797 20.3802 0.000219997C22.3858 -0.0150397 24.3152 0.764097 25.7441 2.16623C27.1731 3.56836 27.9845 5.47863 27.9998 7.47681C28.0151 9.47498 27.2331 11.3974 25.8258 12.8211L15.0502 23.5588C14.7665 23.8413 14.3819 24 13.9809 24C13.5799 24 13.1953 23.8413 12.9117 23.5588L2.13298 12.8196C0.750732 11.3992 -0.0153307 9.49418 0.00023258 7.51585C0.0157959 5.53752 0.811736 3.64467 2.21616 2.24609V2.2491Z'
-                fill='#F64E60'
-              />
-            </svg>
-          ) : (
-            <Heart />
-          )}
-        </button>
+          <Heart color='#202020' />
+        </Button>
       </div>
 
       {/* Назва */}
@@ -78,6 +52,36 @@ export default function ProductCard({ product }: { product: Product }) {
           className={css.addToCard}
           type='button'
         >
+          <svg
+            width='24'
+            height='24'
+            viewBox='0 0 24 24'
+            fill='none'
+            xmlns='http://www.w3.org/2000/svg'
+          >
+            <path
+              d='M3.86403 16.455C3.00603 13.023 2.57703 11.308 3.47803 10.154C4.37903 9 6.14803 9 9.68503 9H14.315C17.853 9 19.621 9 20.522 10.154C21.423 11.308 20.994 13.024 20.136 16.455C19.59 18.638 19.318 19.729 18.504 20.365C17.69 21 16.565 21 14.315 21H9.68503C7.43503 21 6.31003 21 5.49603 20.365C4.68203 19.729 4.40903 18.638 3.86403 16.455Z'
+              stroke='#FFFFFF'
+              stroke-width='1.5'
+            />
+            <path
+              d='M19.5 9.5L18.79 6.895C18.516 5.89 18.379 5.388 18.098 5.009C17.8178 4.63246 17.4373 4.3424 17 4.172C16.56 4 16.04 4 15 4M4.5 9.5L5.21 6.895C5.484 5.89 5.621 5.388 5.902 5.009C6.18218 4.63246 6.56269 4.3424 7 4.172C7.44 4 7.96 4 9 4'
+              stroke='#FFFFFF'
+              stroke-width='1.5'
+            />
+            <path
+              d='M9 4C9 3.73478 9.10536 3.48043 9.29289 3.29289C9.48043 3.10536 9.73478 3 10 3H14C14.2652 3 14.5196 3.10536 14.7071 3.29289C14.8946 3.48043 15 3.73478 15 4C15 4.26522 14.8946 4.51957 14.7071 4.70711C14.5196 4.89464 14.2652 5 14 5H10C9.73478 5 9.48043 4.89464 9.29289 4.70711C9.10536 4.51957 9 4.26522 9 4Z'
+              stroke='#FFFFFF'
+              stroke-width='1.5'
+            />
+            <path
+              d='M8 13V17M16 13V17M12 13V17'
+              stroke='#FFFFFF'
+              stroke-width='1.5'
+              stroke-linecap='round'
+              stroke-linejoin='round'
+            />
+          </svg>
           Додати у кошик
         </Button>
       </div>
