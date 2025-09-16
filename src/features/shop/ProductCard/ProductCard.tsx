@@ -2,7 +2,7 @@ import Image from "next/image";
 import type { Product } from "../types";
 import Button from "../../ui/Button/Button";
 import { Heart } from "lucide-react";
-import { useState } from "react";
+
 import css from "./ProductCard.module.css";
 
 export default function ProductCard({ product }: { product: Product }) {
