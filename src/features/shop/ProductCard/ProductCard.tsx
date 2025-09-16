@@ -22,7 +22,7 @@ export default function ProductCard({ product }: { product: Product }) {
           />
         </div>
         <Button variant="link" className={css.like}>
-          <Heart />
+          <Heart color="#202020" />
         </Button>
       </div>
 

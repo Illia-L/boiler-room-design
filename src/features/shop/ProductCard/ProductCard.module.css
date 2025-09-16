@@ -23,8 +23,8 @@
 }
 .like {
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 16px;
+  right: 14px;
   z-index: 2;
   background: none;
   border: none;
