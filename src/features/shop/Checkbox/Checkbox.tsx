@@ -1,9 +1,12 @@
 "use client";
 
+import s from "./Checkbox.module.css";
+import colors from "../../../app/shop/page.module.css"
+
 import { useState } from "react";
 import Image from "next/image";
 import Button from "../../ui/Button/Button";
-import { ChevronDown, ChevronRight } from "lucide-react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 type Section = {
   id: string;
@@ -83,8 +86,9 @@ const sections: Section[] = [
   },
 ];
 
-export default function SideBar() {
-  const [openSections, setOpenSections] = useState<string[]>(sections.map((s) => s.id));
+export default function Checkbox() {
+  const [openSections, setOpenSections] = useState<string[]>([]);
+  const [selectedValues, setSelectedValues] = useState<string[]>([]);
 
   const toggleSection = (id: string) => {
     setOpenSections((prev) =>
@@ -92,58 +96,69 @@ export default function SideBar() {
     );
   };
 
+  const handleCheckboxChange = (value: string) => {
+    setSelectedValues((prev) =>
+      prev.includes(value) ? prev.filter((v) => v !== value) : [...prev, value]
+    );
+  };
+
   return (
-    <aside aria-label="Фільтри каталогу">
+    <aside aria-label="Фільтри каталогу" className={`${s.aside} ${colors.page}` }>
       {/* Заголовок */}
-      <header
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: 8,
-          padding: "10px 12px",
-          background: "#f5f5f5",
-          borderRadius: 6,
-          marginBottom: 16,
-        }}
-      >
-        <Image src="/icons/funnel.svg" alt="Фільтри" width={16} height={16} priority />
-        <h2 style={{ fontSize: 16, fontWeight: 500, margin: 0 }}>Параметри котельні</h2>
+      <header className={s.header}>
+        <Image
+          src="/icons/funnel.svg"
+          alt="Фільтри"
+          width={14}
+          height={16}
+          priority
+        />
+        <h2>Параметри котельні</h2>
       </header>
 
       {/* Секції */}
-      <form aria-label="Панель фільтрів" style={{ display: "grid", gap: 12 }}>
+      <form
+        aria-label="Панель фільтрів"
+        onSubmit={(e) => {
+          e.preventDefault();
+        }}
+        className={s.form}
+      >
         {sections.map((section) => {
           const isOpen = openSections.includes(section.id);
           return (
-            <fieldset
-              key={section.id}
-              style={{
-                border: "none",
-                padding: 0,
-                margin: 0,
-              }}
-            >
+            <fieldset key={section.id} className={s.fieldset}>
               <legend
                 onClick={() => toggleSection(section.id)}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  padding: "6px 0",
-                  cursor: "pointer",
-                  fontWeight: 500,
-                  fontSize: 14,
-                }}
+                className={s.legend}
               >
                 {section.title}
-                {isOpen ? <ChevronDown size={16} /> : <ChevronRight size={16} />}
+                {isOpen ? (
+                  <ChevronDown
+                    // onClick={() => toggleSection(section.id)}
+                    size={18}
+                    style={{ flexShrink: 0 }}
+                  />
+                ) : (
+                  <ChevronUp
+                    // onClick={() => toggleSection(section.id)}
+                    size={18}
+                    style={{ flexShrink: 0 }}
+                  />
+                )}
               </legend>
 
               {isOpen && (
-                <div style={{ display: "grid", gap: 4, paddingLeft: 4 }}>
+                <div className={s.openDiv}>
                   {section.options.map((opt) => (
-                    <label key={opt.value} style={{ fontSize: 14 }}>
-                      <input type="checkbox" value={opt.value} /> {opt.label}
+                    <label key={opt.value} className={s.label}>
+                      <input
+                        type="checkbox"
+                        value={opt.value}
+                        checked={selectedValues.includes(opt.value)}
+                        onChange={() => handleCheckboxChange(opt.value)}
+                      />
+                      <span>{opt.label}</span>
                     </label>
                   ))}
                 </div>
@@ -153,8 +168,10 @@ export default function SideBar() {
         })}
 
         {/* Кнопка */}
-        <div style={{ marginTop: 8 }}>
-          <Button type="submit">Застосувати</Button>
+        <div className={s.divBt}>
+          <Button className={s.btn} type="submit" variant="fill" size="sm">
+            Застосувати
+          </Button>
         </div>
       </form>
     </aside>

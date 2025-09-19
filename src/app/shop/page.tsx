@@ -1,4 +1,4 @@
-import SideBar from "../../features/shop/SideBar/SideBar";
+import Checkbox from "../../features/shop/Checkbox/Checkbox";
 import Content from "../../features/shop/Content/Content";
 
 export default function ShopPage() {
@@ -17,15 +17,16 @@ export default function ShopPage() {
         aria-label="Фільтри каталогу"
         style={{
           background: "#fff",
-          border: "1px solid #ddd",
-          borderRadius: "8px",
-          padding: "16px",
+          border: "4px",
+          borderRadius: "4px",
+          padding: "32px 16px",
           alignSelf: "start",
           position: "sticky",
           top: "20px",
+          boxShadow: "2px 2px 10px 0 rgba(0, 0, 0, 0.08)",
         }}
       >
-        <SideBar />
+        <Checkbox />
       </aside>
 
       {/* Права колонка */}
