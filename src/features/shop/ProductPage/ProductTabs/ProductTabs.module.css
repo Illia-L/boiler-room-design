@@ -1,0 +1,131 @@
+/* контейнер секції */
+.wrap {
+    background: #f6f6f6;
+    /* як у макеті */
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 16px;
+    display: grid;
+    gap: 12px;
+}
+
+/* ===== таби як посилання з підкресленням ===== */
+.tabbar {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.tab {
+    appearance: none;
+    background: transparent;
+    border: none;
+    padding: 0;
+    font: inherit;
+    font-size: 16px;
+    color: #6b6b6b;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.tab:hover {
+    color: #222;
+}
+
+.tabActive {
+    color: #222;
+    font-weight: 600;
+    text-decoration-thickness: 2px;
+}
+
+/* ===== панель контенту ===== */
+.panel {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 14px;
+    display: grid;
+    gap: 12px;
+}
+
+/* ОПИС */
+.lead {
+    margin: 0;
+    color: #3f3f3f;
+    line-height: 1.55;
+    font-size: 14px;
+}
+
+.subhead {
+    margin: 8px 0 4px;
+    font-weight: 700;
+}
+
+.ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.ul li {
+    margin: 4px 0;
+}
+
+/* ПАРАМЕТРИ (таблиця) */
+.table {
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    overflow: hidden;
+    /* щоб закруглення працювало */
+}
+
+.tr {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.td {
+    padding: 10px 12px;
+    font-size: 14px;
+    line-height: 1.4;
+    border-bottom: 1px solid #ededed;
+}
+
+.tdLabel {
+    color: #666;
+}
+
+.tdValue {
+    color: #222;
+}
+
+/* зебра */
+.tr:nth-child(odd) .td {
+    background: #f8f8f8;
+}
+
+.tr:last-child .td {
+    border-bottom: none;
+}
+
+/* ===== desktop підсилюємо типографіку і відступи ===== */
+@media (min-width: 1024px) {
+    .wrap {
+        padding: 20px;
+        gap: 14px;
+    }
+
+    .tab {
+        font-size: 18px;
+    }
+
+    .panel {
+        padding: 18px;
+    }
+
+    .lead,
+    .td {
+        font-size: 15px;
+    }
+}
