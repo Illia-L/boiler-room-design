@@ -1,0 +1,114 @@
+.card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 16px;
+    display: grid;
+    gap: 16px;
+}
+
+/* desktop: 2 колонки (фото + інфо) */
+@media (min-width: 1024px) {
+    .card {
+        grid-template-columns: 420px 1fr;
+        gap: 24px;
+    }
+}
+
+.media {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f3f3f3;
+}
+
+.info {
+    display: grid;
+    gap: 8px;
+    align-content: start;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.25;
+    margin: 0;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.code {
+    font-size: 12px;
+    color: #7a7a7a;
+    margin: 0;
+}
+
+.meta {
+    font-size: 14px;
+    color: #555;
+    margin: 0;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.buyBtn {
+    width: 240px;
+}
+
+/* кнопки "вподобати" */
+.likeBtn {
+    padding: 0;
+    min-height: auto;
+}
+
+/* ❤️ мобільна версія — поверх фото */
+.likeBtnMobile {
+    display: flex;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ❤️ десктопна версія — біля заголовка */
+.likeBtnDesktop {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .likeBtnMobile {
+        display: none;
+    }
+
+    .likeBtnDesktop {
+        display: inline-flex;
+    }
+}
+
+/* Активний стан кнопки: червоне сердечко */
+.likeBtnActive svg {
+    color: red;
+    fill: red;
+}
