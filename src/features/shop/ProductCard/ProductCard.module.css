@@ -1,13 +1,13 @@
 .productCard {
   width: 340px;
   height: 498px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--shop-color-gray-light);
   border-radius: 4px;
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  background: var(--color-surface);
+  background: var(--shop-color-white);
 }
 .imageBlock {
   position: relative;
@@ -51,11 +51,12 @@
 }
 .articleCard {
   font-size: 14px;
-  color: #666;
+  
+  color: var(--shop-color-gray-dark);
   margin: 0px;
 }
 .addToCard {
   width: 100%;
-  background: #4e4e57;
+  background: var(--shop-color-primary);
   border-radius: 4px;
 }

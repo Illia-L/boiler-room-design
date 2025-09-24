@@ -4,12 +4,15 @@ import Button from '../../ui/Button/Button';
 import { Heart } from 'lucide-react';
 
 import css from './ProductCard.module.css';
+import cssPage from '../../../app/shop/page.module.css'
+
 
 export default function ProductCard({ product }: { product: Product }) {
   return (
     <article
       aria-labelledby={`product-${product.id}-title`}
-      className={css.productCard}
+      className={`${css.productCard} ${cssPage.page}`}
+    
     >
       {/* Картинка */}
       <div className={css.imageBlock}>
