@@ -23,7 +23,8 @@
 }
 .like {
   position: absolute;
-  top: 16px;
+  width: 28px;
+  top: 5px;
   right: 14px;
   z-index: 2;
   background: none;
@@ -51,7 +52,7 @@
 }
 .articleCard {
   font-size: 14px;
-  
+
   color: var(--shop-color-gray-dark);
   margin: 0px;
 }
